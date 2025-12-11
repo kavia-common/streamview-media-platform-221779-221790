@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="12" failures="0" errors="0" time="2.789">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="0.965" tests="1">
+    <testcase classname=" renders VideoCard and handles click" name=" renders VideoCard and handles click" time="0.054">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.037" tests="1">
+    <testcase classname=" renders modal with video source and closes" name=" renders modal with video source and closes" time="0.132">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.116" tests="1">
+    <testcase classname=" renders home with grid heading" name=" renders home with grid heading" time="0.094">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.222" tests="2">
+    <testcase classname=" renders brand and navigation links" name=" renders brand and navigation links" time="0.274">
+    </testcase>
+    <testcase classname=" search input updates URL query" name=" search input updates URL query" time="0.022">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.544" tests="1">
+    <testcase classname=" renders history items" name=" renders history items" time="0.073">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.592" tests="2">
+    <testcase classname=" useAuth loads current user" name=" useAuth loads current user" time="0.086">
+    </testcase>
+    <testcase classname=" useVideos loads categories and videos" name=" useVideos loads categories and videos" time="0.056">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.614" tests="1">
+    <testcase classname=" renders CategorySidebar with header" name=" renders CategorySidebar with header" time="0.116">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.763" tests="1">
+    <testcase classname=" renders app without crashing and shows Browse heading on home" name=" renders app without crashing and shows Browse heading on home" time="0.26">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-12-11T14:24:03" time="1.706" tests="2">
+    <testcase classname=" login submits and navigates" name=" login submits and navigates" time="0.141">
+    </testcase>
+    <testcase classname=" register submits" name=" register submits" time="0.069">
+    </testcase>
+  </testsuite>
+</testsuites>
