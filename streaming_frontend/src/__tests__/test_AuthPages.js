@@ -28,7 +28,7 @@ test('login submits and navigates', async () => {
 
   fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'a@a.com' } });
   fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'secret123' } });
-  fireEvent.submit(screen.getByRole('button', { name: /log in/i }));
+  fireEvent.submit(screen.getByRole('button', { name: /login/i }));
 
   await waitFor(() => expect(api.default.post).toHaveBeenCalled());
 });

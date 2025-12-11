@@ -19,6 +19,9 @@ export default function CategorySidebar() {
 
   return (
     <div>
+      <div className="page-header" style={{ padding: '8px 12px' }}>
+        <div className="page-title" style={{ fontSize: 14 }}>Categories</div>
+      </div>
       <ul className="category-list">
         <li
           className={`category-item ${!category ? 'active' : ''}`}
