@@ -1,20 +1,14 @@
 /* eslint-disable no-undef */
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
 
-// Mock HTMLMediaElement to avoid errors in jsdom
-Object.defineProperty(global.window.HTMLMediaElement.prototype, 'play', {
-  configurable: true,
-  value: jest.fn(),
-});
-Object.defineProperty(global.window.HTMLMediaElement.prototype, 'pause', {
-  configurable: true,
-  value: jest.fn(),
-});
-Object.defineProperty(global.window.HTMLMediaElement.prototype, 'load', {
-  configurable: true,
-  value: jest.fn(),
-});
+// Stabilize HTMLMediaElement in jsdom so video components/tests don't throw
+const mediaProto = global.window.HTMLMediaElement && global.window.HTMLMediaElement.prototype;
+if (mediaProto) {
+  const noop = () => {};
+  Object.defineProperty(mediaProto, 'play', { configurable: true, writable: true, value: jest.fn(noop) });
+  Object.defineProperty(mediaProto, 'pause', { configurable: true, writable: true, value: jest.fn(noop) });
+  Object.defineProperty(mediaProto, 'load', { configurable: true, writable: true, value: jest.fn(noop) });
+  Object.defineProperty(mediaProto, 'muted', { configurable: true, writable: true, value: true });
+}
