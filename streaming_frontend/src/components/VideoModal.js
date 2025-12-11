@@ -28,6 +28,7 @@ export default function VideoModal({ video, onClose }) {
         </div>
         <div className="modal-body">
           <video
+            data-testid="video-player"
             ref={ref}
             style={{ width: '100%', height: 'auto', background: '#000' }}
             controls

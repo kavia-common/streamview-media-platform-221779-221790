@@ -1,13 +1,16 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  // Let CRA's jest still be used via react-scripts test, but ensure transforms work for ESM deps like axios
+  // Use babel-jest to transpile TS/JSX and ESM dependencies used in tests
   transform: {
     '^.+\\.[jt]sx?$': 'babel-jest'
   },
+  // Transpile axios and any other ESM subpath that Jest might try to load
   transformIgnorePatterns: [
-    'node_modules/(?!axios)/'
+    'node_modules/(?!(axios)/)'
   ],
   moduleNameMapper: {
+    // Prefer axios CommonJS build when available to avoid ESM interop issues
+    '^axios$': require.resolve('axios/dist/node/axios.cjs'),
     // Map CSS imports to proxy
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     // Static assets
